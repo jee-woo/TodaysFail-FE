@@ -2,6 +2,13 @@
   "name": "losers",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "start:msw": "REACT_APP_MSW=enabled react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -19,12 +26,6 @@
     "redux": "^4.2.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "homepage": "https://todays-fail.netlify.app",
   "eslintConfig": {
@@ -49,7 +50,12 @@
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "msw": "^2.11.3",
     "prettier": "^2.8.4"
   },
-  "proxy": "https://nginx-nginx-r8xoo2mlejm1bez.sel3.cloudtype.app/api/v1"
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
 }
